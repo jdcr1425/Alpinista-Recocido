@@ -51,3 +51,25 @@ print("El valor de x que lo vuelve minimo es : ",valor)
 
 #indice_menor=indices.index(indice_lista_minimos)
 #print(indice_menor)
+
+
+
+
+
+import math
+
+
+def F(x):
+  return math.sin(x/10)
+  
+def main():
+  u = 0
+  while (True):
+    v = u + 1
+    if F(v) <= F(u):
+        u = v
+    else:
+        break
+    
+  print("El valor de U es {0} y el valor minimo es {1}".format(u,F(u)))
+main()
