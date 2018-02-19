@@ -58,18 +58,19 @@ print("El valor de x que lo vuelve minimo es : ",valor)
 
 import math
 
-
-def F(x):
-  return math.sin(x/10)
-  
-def main():
+def Alpinista():
   u = 0
   while (True):
     v = u + 1
-    if F(v) <= F(u):
+    
+    V=math.sin(v/10)
+    U=math.sin(u/10)
+    
+    if V <= U:   
         u = v
     else:
         break
     
-  print("El valor de U es {0} y el valor minimo es {1}".format(u,F(u)))
-main()
+  print("El valor que hace minima a la funcion es {0} y el valor minimo es {1}".format(u,U))
+  
+Alpinista()
