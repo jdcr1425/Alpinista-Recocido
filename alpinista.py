@@ -58,9 +58,10 @@ print("El valor de x que lo vuelve minimo es : ",valor)
 
 import math
 
-def Alpinista():
+def Alpinista(x):
   u = 0
-  while (True):
+  dominio=0
+  while (dominio<x+1):
     v = u + 1
     
     V=math.sin(v/10)
@@ -70,7 +71,10 @@ def Alpinista():
         u = v
     else:
         break
+    dominio=dominio+1
+    if dominio == x-2:
+       break
     
   print("El valor que hace minima a la funcion es {0} y el valor minimo es {1}".format(u,U))
   
-Alpinista()
+Alpinista(50)
